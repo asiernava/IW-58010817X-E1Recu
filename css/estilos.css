@@ -1,0 +1,458 @@
+/*Estilos Generales (Pantalla Inicio)*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    /*background-color: rgb(234, 234, 251);*/
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+}
+
+/* HEADER -- Estilos del menu CSS */   
+
+li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.15rem;
+}
+
+a:hover {
+    color: gray;
+}
+
+
+header {
+    background-color: #2F4F4F;
+    position: relative;
+    padding: 0.5rem;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 75px;
+    /*max-width: 1600px;*/
+    max-width: 1600px;
+    margin: 0.5rem;
+    margin-left: 2.5rem;
+}
+
+                     /* Logo Pequeño Tienda */
+
+.nava_mini_logo {
+
+    height: 5rem;
+    width: 3.25rem;
+}
+
+.container .titulo_tornilleria a{
+    font-size: 1.4rem;
+    color: whitesmoke;
+    justify-content: left;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+.container .logo_tornilleria{
+    display: flex;
+    align-items: center;
+}
+
+.container .lista_menu{
+    display: flex;
+    gap: 2rem;
+}
+
+          /* Boton de Login */
+
+.login_button{
+    background-color: orange;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-size: 1,15rem;
+    text-decoration: none;
+    border-radius: 10px;
+    justify-content: left;
+    margin-right: 2rem;
+
+}      
+
+/*MENU VERTICAL*/
+
+.menu_vertical {
+    position: absolute;
+    left: 2rem;
+    top: 70px;
+    width: 150px;
+    background: rgb(90, 90, 90);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+}
+
+.menu_vertical a{
+    color: white;
+}
+
+.menu_vertical li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* MENU RESPONSIVE + FOTO RESPONSIVE*/
+
+@media(max-width: 900px) {
+    .container .lista_menu {
+        display: none;
+    }
+
+    .container .menu_but {
+        display: block;
+    }
+    .menu_vertical{
+        display: block;
+    }
+}
+
+@media(min-width: 900px) {
+    .container .menu_but {
+        display: none;
+    }
+    .menu_vertical{
+        display: none;
+    }
+}
+
+@media(max-width: 768px){
+    .slider{
+        display: none;
+    }
+    .foto768{
+        display: flex;
+        height: 500px;
+        width: 768px;
+    }
+}
+
+@media(min-width: 768px){
+    .slider{
+        display: flex;
+    }
+    .foto768{
+        display: none;
+        margin: 10px 1px;
+    }
+}
+
+
+/*FIN DEL HEADER*/
+
+/*ESTILOS FOTOS TORNILLOS*/
+
+main .slider{
+    width: 1700px;
+    height: auto;
+    margin: 1px 1px;
+}
+
+.slider ul{
+    display: flex;
+    padding: 0;
+    width: 100%;
+    animation: slide 25s infinite alternate ease-in-out;
+}
+
+.slider li {
+
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+
+.slider img{
+    width: 1700px;
+    height: 800px;
+    
+}
+
+@keyframes slide {
+    0% {margin-left: 0;}
+    15%{margin-left: 0;}
+
+    18%{ margin-left: -100%;}
+    32%{ margin-left: -100%;}
+
+    35%{ margin-left: -200%;}
+    50%{ margin-left: -200%;}
+
+    53%{ margin-left: -300%;}
+    68%{ margin-left: -300%;}
+
+    71%{ margin-left: -400%;}
+    85%{ margin-left: -400%;}
+
+    88%{ margin-left: -500%;}
+    100%{ margin-left: -500%;}
+
+}
+
+              /*TEXTO EN IMAGENES*/
+
+.texto {
+    position: absolute;
+    width: 420px;
+    height: 110px;
+    top: 90%; /* Ajustar la posición vertical del texto */
+    left: 85%; /* Ajustar la posición horizontal del texto */
+    transform: translate(-50%, -50%);
+    color: #2F4F4F;
+    margin-bottom: 5px;
+    border-radius: 15px;
+    font-size: 18px; /* Ajustar el tamaño de fuente según sea necesario */
+}
+
+.texto h2 {
+    font-size: 45px;
+}
+
+          /*darle color a los textos donde de #2f4f4f no se vería*/
+div .texto_en_blanco{
+    color: aliceblue;
+}
+
+div .texto_en_negro{
+    color: black;
+}
+
+/*PRODUCTOS MAS VENDIDOS*/
+
+.container_productos_principal {
+
+    display: grid; /*  Técnica Display Grid */
+    /* 3x2 */
+    grid-template-columns: repeat(3, 275px); 
+    grid-template-rows: repeat(2, 550px);
+
+    gap: 40px;
+    padding: 20px;
+    background: whitesmoke;
+    height: 1200px;
+    margin-top: 100px;
+  
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.producto {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    height: 500px;
+    text-align: center;
+}
+         /*Cuando pasamos cursor por encima*/
+.producto:hover {
+    border-color:#2F4F4F;
+    box-shadow: 0 0 10px #2F4F4F;
+    /*background-color: #b1cdcd;*/
+}
+         /*Retocamos la imagen (250x250)*/
+.producto img {
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.producto h2 {
+    font-size: 22px;
+    font-weight: 200;
+    padding-top: 15px;
+}
+
+.producto p {
+    color: rgb(69, 69, 69);
+    padding-top: 10px;
+}
+
+.producto h3 {
+    color: #2F4F4F;
+    padding: 20px;
+    /*text-align: center;*/
+    font-size: 25px;
+}
+
+        /*Estilo botón de comprar*/
+
+.boton_comprar{
+    background-color: #2F4F4F;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1,15rem;
+    text-decoration: none;
+    border-radius: 10px;
+    
+    }  
+.boton_comprar:hover{
+    color: black;
+    background-color: rgb(243, 208, 144);
+}
+
+
+
+/*FOOTER*/
+
+
+div .caja{
+    background: gray;
+    display: flex;
+    text-align: center;
+    padding: 50px 0px 60px 0px;
+}
+
+/*estilo texto adcabetxuko footer*/
+
+.logo-footer-nava{
+    padding: 0px 0px 0px 100px;
+}
+
+.logo-footer-nava img{
+    height: 9rem;
+    width: 6rem;
+}
+
+.texto-footer {
+    width: 350px;
+    text-align: left;
+    padding: 30px 50px 0px 30px;
+}
+
+.texto-footer h3{
+    font-size: 25px;
+    font-weight: 700;
+    color: #f5f5f5;
+}
+
+.texto-footer p {
+
+    color: #f5f5f5;
+    font-size: 20px;
+
+}
+
+/*estilo texto sobre nosotros*/
+.texto-sobrenosotros {
+    text-align: left;
+    width: 450px;
+    padding: 25px 75px 0px 50px;
+}
+
+.texto-sobrenosotros h4{
+    font-size: 25px;
+    font-weight: 600;
+    color: #f5f5f5;
+}
+
+.texto-sobrenosotros p {
+
+    color: #f5f5f5;
+    font-size: 15px;
+
+}
+
+/*estilo texto contacto*/
+.texto-contacto {
+    text-align: left;
+    width: 400px;
+    padding: 25px 75px 0px 75px;
+    
+}
+
+.texto-contacto h4{
+    font-size: 25px;
+    font-weight: 600;
+    color: #f5f5f5;
+}
+
+.texto-contacto i{
+    display: flex;
+
+}
+.texto-contacto i a{
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+/*estilo imagen athletic*/
+
+.foto-footer-confianza {
+
+    text-align: right;
+    width: 200px;
+    padding: 50px 75px 0px 20px;
+
+}
+
+.foto-footer-confianza img{
+    height: 3rem;
+    width: 10rem;
+}
+
+
+/*FOOTER RESPONSIVE */
+
+/*movil*/
+
+@media(max-width: 768px) {
+    .footer-resizable-1280{
+        display: none;
+    }
+    .footer-normal {
+        display: none;
+    }
+}
+
+/*ordenador*/
+
+@media(min-width: 1280px) {
+    .footer-resizable-1280{
+        display: none;
+    }
+    .footer-resizable-768{
+        display: none;
+    }
+}
+
+/*tablet*/
+
+@media(min-width: 768px) {
+    .footer-resizable-768{
+        display: none;
+    }
+}
+@media(max-width: 1280px){
+    .footer-normal {
+        display: none;
+    }
+}
+
+
+

@@ -1,0 +1,274 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/**/
+/* HEADER -- Estilos del menu CSS */   
+
+li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.15rem;
+}
+
+a:hover {
+    color: gray;
+}
+
+
+header {
+    background-color: #2F4F4F;
+    position: relative;
+    padding: 0.5rem;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 75px;
+    /*max-width: 1600px;*/
+    max-width: 1600px;
+    margin: 0.5rem;
+    margin-left: 2.5rem;
+}
+
+                     /* Logo Pequeño Tienda */
+
+.nava_mini_logo {
+
+    height: 5rem;
+    width: 3.25rem;
+}
+
+.container .titulo_tornilleria a{
+    font-size: 1.4rem;
+    color: whitesmoke;
+    justify-content: left;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+.container .logo_tornilleria{
+    display: flex;
+    align-items: center;
+}
+
+.container .lista_menu{
+    display: flex;
+    gap: 2rem;
+}
+
+          /* Boton de Login */
+
+.login_button{
+    background-color: orange;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-size: 1,15rem;
+    text-decoration: none;
+    border-radius: 10px;
+    justify-content: left;
+    margin-right: 2rem;
+
+}      
+
+/*MENU VERTICAL*/
+
+.menu_vertical {
+    position: absolute;
+    left: 2rem;
+    top: 70px;
+    width: 150px;
+    background: rgb(90, 90, 90);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+}
+
+.menu_vertical a{
+    color: white;
+}
+
+.menu_vertical li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* MENU RESPONSIVE + FOTO RESPONSIVE*/
+
+@media(max-width: 900px) {
+    .container .lista_menu {
+        display: none;
+    }
+
+    .container .menu_but {
+        display: block;
+    }
+    .menu_vertical{
+        display: block;
+    }
+}
+
+@media(min-width: 900px) {
+    .container .menu_but {
+        display: none;
+    }
+    .menu_vertical{
+        display: none;
+    }
+}
+
+@media(max-width: 768px){
+    .slider{
+        display: none;
+    }
+    .foto768{
+        display: flex;
+        height: 500px;
+        width: 768px;
+    }
+}
+
+@media(min-width: 768px){
+    .slider{
+        display: flex;
+    }
+    .foto768{
+        display: none;
+        margin: 10px 1px;
+    }
+}
+
+
+/*FIN DEL HEADER*/
+
+
+
+/**/
+/*Separar contenedor izquierdo y derecho*/
+
+.contenedor{
+    display: flex;
+}
+
+.contenedor-izda {
+    width: 400px; /* Ancho de la columna izquierda */
+    margin: 30px;
+}
+
+.contenedor-producto {
+    flex: 1; /* El contenido principal ocupa el espacio restante */
+    display: flex;
+    background: #fff;
+    margin: 1rem;
+    margin-right: 5rem;
+    padding: 2rem 1rem;
+    margin-bottom: 3rem;
+    border: 1px solid #2F4F4F;
+    border-radius: 10px;
+    
+}
+
+/**/
+/*CONTENEDOR IZQUIERDA*/
+
+.contenedor-izda img{
+    height: 220px;
+    width: 350px;
+    margin-top: 40px;
+}
+
+/**/
+/*CONTENEDOR PRODUCTO*/
+
+
+    /*IMAGEN DEL PRODUCTO*/
+
+.columna-imagen {
+
+    width: 300px;
+    margin: 15px;
+    margin-top: 30px;
+
+}
+
+.columna-imagen img {
+    position: relative; /*podemos desplazar la imagen*/
+    width: 300px;
+    height: 300px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+      /*TEXTO DEL PRODUCTO*/
+
+.ventana-producto {
+    flex: 1; /* El contenido principal ocupa el espacio restante */
+    background: #fff;
+    margin: 1rem;
+    padding: 2rem 1rem;
+    margin-bottom: 3rem;
+    margin-right: 130px;
+    margin-left: 50px;
+    min-width: 300px;
+    
+
+}
+
+.ventana-producto h1{
+    color: #2F4F4F;
+    font-size: 44px;
+    font-weight: 200;
+}
+
+.lista-longitud li{
+    list-style-type: disc;
+}
+
+        /*Precio*/
+.ventana-producto h3 {
+    color: #2F4F4F;
+    padding: 20px;
+    text-align: center;
+    font-size: 45px;
+}
+
+
+
+        /*Estilo botón de comprar*/
+
+.boton-comprar{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 70px;
+}        
+
+.boton{
+    background-color: #2F4F4F;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1,35rem;
+    text-decoration: none;
+    border-radius: 10px;
+            
+}  
+
+.boton:hover{
+    color: black;
+    background-color: rgb(243, 208, 144);
+}
+
+
