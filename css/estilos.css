@@ -260,6 +260,25 @@ div .texto_en_negro{
     align-content: center;
 }
 
+.container_productos_principal-1280px{
+
+    display: grid; /*  Técnica Display Grid */
+    /* 3x2 */
+    grid-template-columns: repeat(2, 275px); 
+    grid-template-rows: repeat(3, 550px);
+
+    gap: 40px;
+    padding: 20px;
+    background: whitesmoke;
+    height: 1800px;
+    margin-top: 100px;
+  
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
 .producto {
     border: 2px solid #ccc;
     border-radius: 5px;
@@ -314,6 +333,22 @@ div .texto_en_negro{
     background-color: rgb(243, 208, 144);
 }
 
+/*OPCION RESPONSIVE*/
+
+/*ordenador*/
+
+@media(max-width: 1280px) {
+    .container_productos_principal{
+        display: none;
+    }
+}
+
+@media(min-width: 1280px) {
+    .container_productos_principal-1280px{
+        display: none;
+    }
+}
+
 
 
 /*FOOTER*/
@@ -326,7 +361,7 @@ div .caja{
     padding: 50px 0px 60px 0px;
 }
 
-/*estilo texto adcabetxuko footer*/
+/*estilo texto footer*/
 
 .logo-footer-nava{
     padding: 0px 0px 0px 100px;
@@ -401,7 +436,7 @@ div .caja{
     padding-left: 10px;
 }
 
-/*estilo imagen athletic*/
+/*estilo imagen */
 
 .foto-footer-confianza {
 

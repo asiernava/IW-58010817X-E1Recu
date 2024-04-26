@@ -229,7 +229,30 @@ header {
 .contenedor-parte-dcha {
     flex: 1;
     display: grid; /*  Técnica Display Grid */
-    /* 3x2 */
+    /* 3x2 
+    grid-template-columns: repeat(3, 275px); 
+    grid-template-rows: repeat(3, 550px);
+
+    gap: 40px;
+    padding: 20px;
+    background: whitesmoke;
+    height: auto;
+    margin-top: 60px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    border: 1px solid #2F4F4F;
+    border-radius: 10px;
+  
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;*/
+}
+
+.contenedor-dcha-normal{
+
+    display: grid; /*  Técnica Display Grid */
+
     grid-template-columns: repeat(3, 275px); 
     grid-template-rows: repeat(3, 550px);
 
@@ -247,6 +270,31 @@ header {
     align-items: center;
     justify-content: center;
     align-content: center;
+
+}
+
+.contenedor-dcha-1280px {
+
+    display: grid; /*  Técnica Display Grid */
+
+    grid-template-columns: repeat(2, 275px); 
+    grid-template-rows: repeat(4, 550px);
+
+    gap: 40px;
+    padding: 20px;
+    background: whitesmoke;
+    height: auto;
+    margin-top: 60px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    border: 1px solid #2F4F4F;
+    border-radius: 10px;
+  
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
 }
 
    /* PRODUCTOS */
@@ -305,6 +353,48 @@ header {
 }
 
 
+/*OPCIÓN RESPONSIVE*/
+
+/*movil*/
+@media(max-width: 768px) {
+    .contenedor-dcha-normal{
+        display: none;
+    }
+    .contenedor-parte-izda{
+        display: none;
+    }
+}
+
+/*ordenador*/
+
+@media(min-width: 1280px) {
+    .contenedor-dcha-1280px{
+        display: none;
+    }
+    .footer-resizable-768{
+        display: none;
+    }
+}
+
+/*tablet*/
+
+@media(min-width: 768px) {
+    .footer-resizable-768{
+        display: none;
+    }
+}
+@media(max-width: 1280px){
+    .contenedor-dcha-normal {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
 
 
 
@@ -318,7 +408,7 @@ div .caja{
     padding: 50px 0px 60px 0px;
 }
 
-/*estilo texto adcabetxuko footer*/
+/*estilo texto footer*/
 
 .logo-footer-nava{
     padding: 0px 0px 0px 100px;
@@ -393,7 +483,7 @@ div .caja{
     padding-left: 10px;
 }
 
-/*estilo imagen athletic*/
+/*estilo imagen */
 
 .foto-footer-confianza {
 
