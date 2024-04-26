@@ -1,33 +1,247 @@
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
+/*Estilos Generales (Pantalla Tornillos)*/
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-header, footer {
-    background-color: #333;
+body {
+    height: 100vh;
+    /*background-color: rgb(234, 234, 251);*/
+    background-color: #f5f5f5;
+    overflow-x: hidden;
+}
+
+
+/* HEADER -- Estilos del menu CSS */   
+
+li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
     color: white;
-    text-align: center;
-    padding: 10px 0;
+    font-size: 1.15rem;
 }
 
-/* Estilos de la parte derecha*/
-.contenedor-parte-izda {
-    flex: 1;
+a:hover {
+    color: gray;
 }
+
+
+header {
+    background-color: #2F4F4F;
+    position: relative;
+    padding: 0.5rem;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 75px;
+    /*max-width: 1600px;*/
+    max-width: 1600px;
+    margin: 0.5rem;
+    margin-left: 2.5rem;
+}
+
+                     /* Logo Pequeño Tienda */
+
+.nava_mini_logo {
+
+    height: 5rem;
+    width: 3.25rem;
+}
+
+.container .titulo_tornilleria a{
+    font-size: 1.4rem;
+    color: whitesmoke;
+    justify-content: left;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+.container .logo_tornilleria{
+    display: flex;
+    align-items: center;
+}
+
+.container .lista_menu{
+    display: flex;
+    gap: 2rem;
+}
+
+          /* Boton de Login */
+
+.login_button{
+    background-color: orange;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-size: 1,15rem;
+    text-decoration: none;
+    border-radius: 10px;
+    justify-content: left;
+    margin-right: 2rem;
+
+}      
+
+/*MENU VERTICAL*/
+
+.menu_vertical {
+    position: absolute;
+    left: 2rem;
+    top: 70px;
+    width: 150px;
+    background: rgb(90, 90, 90);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+}
+
+.menu_vertical a{
+    color: white;
+}
+
+.menu_vertical li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* MENU RESPONSIVE + FOTO RESPONSIVE*/
+
+@media(max-width: 900px) {
+    .container .lista_menu {
+        display: none;
+    }
+
+    .container .menu_but {
+        display: block;
+    }
+    .menu_vertical{
+        display: block;
+    }
+}
+
+@media(min-width: 900px) {
+    .container .menu_but {
+        display: none;
+    }
+    .menu_vertical{
+        display: none;
+    }
+}
+
+@media(max-width: 768px){
+    .slider{
+        display: none;
+    }
+    .foto768{
+        display: flex;
+        height: 500px;
+        width: 768px;
+    }
+}
+
+@media(min-width: 768px){
+    .slider{
+        display: flex;
+    }
+    .foto768{
+        display: none;
+        margin: 10px 1px;
+    }
+}
+
+
+/*FIN DEL HEADER*/
+
+/*FIN DEL HEADER*/
+
+
+/* BODY*/
+
+.contenedor{
+    display: flex;
+    margin: 10px;
+    /*border: 1px solid #2F4F4F;*/
+} 
+
+
+/*Estilos parte izquierda*/
+.contenedor-parte-izda {
+    width: 370px; /*anchura de columna*/
+    margin: 30px;
+    margin-top: 60px;
+    /*border: 1px solid #2F4F4F;*/
+}
+
+.contenedor-parte-izda h2 {
+
+    font-size: 30px;
+    font-weight: 200;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+}
+
+             /*radiobutton*/
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    padding-left: 70px;
+}
+  
+.radio-group label {
+    margin-bottom: 10px;
+}
+  
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+    /*checkbox*/
+ 
+.check-group {
+        display: flex;
+        flex-direction: column;
+        padding-left: 70px;
+}
+      
+.check-group label {
+        margin-bottom: 10px;
+}
+      
+.radio-group input[type="checkbox"] {
+        margin-right: 5px;
+}    
+
+
 
 /* Estilos de la sección de productos */
 .contenedor-parte-dcha {
     flex: 1;
-    display: grid;
-    /*grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));*/
-    grid-template-columns: repeat(2, 275px);
-    grid-template-rows: repeat(3, 300px);
-    gap: 20px;
+    display: grid; /*  Técnica Display Grid */
+    /* 3x2 */
+    grid-template-columns: repeat(3, 275px); 
+    grid-template-rows: repeat(3, 550px);
+
+    gap: 40px;
     padding: 20px;
-    background: gray;
-    height: 1200px;
+    background: whitesmoke;
+    height: auto;
+    margin-top: 60px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    border: 1px solid #2F4F4F;
+    border-radius: 10px;
   
     justify-items: center;
     align-items: center;
@@ -35,15 +249,201 @@ header, footer {
     align-content: center;
 }
 
+   /* PRODUCTOS */
 .producto {
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     border-radius: 5px;
-    padding: 10px;
+    padding: 20px;
+    height: 500px;
+    text-align: center;
+}
+         /*Cuando pasamos cursor por encima*/
+.producto:hover {
+    border-color:#2F4F4F;
+    box-shadow: 0 0 10px #2F4F4F;
+    /*background-color: #b1cdcd;*/
+}
+         /*Retocamos la imagen (250x250)*/
+.producto img {
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
 }
 
-.producto img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+.producto h2 {
+    font-size: 22px;
+    font-weight: 200;
+    padding-top: 15px;
 }
+
+.producto p {
+    color: rgb(69, 69, 69);
+    padding-top: 10px;
+}
+
+.producto h3 {
+    color: #2F4F4F;
+    padding: 20px;
+    /*text-align: center;*/
+    font-size: 25px;
+}
+
+        /*Estilo botón de comprar*/
+
+.boton_comprar{
+    background-color: #2F4F4F;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1,15rem;
+    text-decoration: none;
+    border-radius: 10px;
+    
+    }  
+.boton_comprar:hover{
+    color: black;
+    background-color: rgb(243, 208, 144);
+}
+
+
+
+
+
+/*FOOTER*/
+
+
+div .caja{
+    background: #2F4F4F;
+    display: flex;
+    text-align: center;
+    padding: 50px 0px 60px 0px;
+}
+
+/*estilo texto adcabetxuko footer*/
+
+.logo-footer-nava{
+    padding: 0px 0px 0px 100px;
+}
+
+.logo-footer-nava img{
+    height: 8rem;
+    width: 6rem;
+}
+
+.texto-footer {
+    width: 350px;
+    text-align: left;
+    padding: 30px 50px 0px 30px;
+}
+
+.texto-footer h3{
+    font-size: 25px;
+    font-weight: 700;
+    color: #f5f5f5;
+}
+
+.texto-footer p {
+
+    color: #f5f5f5;
+    font-size: 20px;
+
+}
+
+/*estilo texto sobre nosotros*/
+.texto-sobrenosotros {
+    text-align: left;
+    width: 450px;
+    padding: 25px 75px 0px 50px;
+}
+
+.texto-sobrenosotros h4{
+    font-size: 25px;
+    font-weight: 600;
+    color: #f5f5f5;
+}
+
+.texto-sobrenosotros p {
+
+    color: #f5f5f5;
+    font-size: 15px;
+
+}
+
+/*estilo texto contacto*/
+.texto-contacto {
+    text-align: left;
+    width: 400px;
+    padding: 25px 75px 0px 75px;
+    
+}
+
+.texto-contacto h4{
+    font-size: 25px;
+    font-weight: 600;
+    color: #f5f5f5;
+}
+
+.texto-contacto i{
+    display: flex;
+
+}
+.texto-contacto i a{
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+/*estilo imagen athletic*/
+
+.foto-footer-confianza {
+
+    text-align: right;
+    width: 200px;
+    padding: 50px 75px 0px 20px;
+
+}
+
+.foto-footer-confianza img{
+    height: 3rem;
+    width: 10rem;
+}
+
+
+/*FOOTER RESPONSIVE */
+
+/*movil*/
+
+@media(max-width: 768px) {
+    .footer-resizable-1280{
+        display: none;
+    }
+    .footer-normal {
+        display: none;
+    }
+}
+
+/*ordenador*/
+
+@media(min-width: 1280px) {
+    .footer-resizable-1280{
+        display: none;
+    }
+    .footer-resizable-768{
+        display: none;
+    }
+}
+
+/*tablet*/
+
+@media(min-width: 768px) {
+    .footer-resizable-768{
+        display: none;
+    }
+}
+@media(max-width: 1280px){
+    .footer-normal {
+        display: none;
+    }
+}
+
 

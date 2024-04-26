@@ -212,6 +212,12 @@ header {
     padding-left: 15px;
 }
 
+section .imagen-reseña{
+
+    width: 300px;
+    height: 350px;
+}
+
       /*TEXTO DEL PRODUCTO*/
 
 .ventana-producto {
@@ -233,8 +239,13 @@ header {
     font-weight: 200;
 }
 
+.lista-longitud{
+    margin-top: 50px;
+}
+
 .lista-longitud li{
     list-style-type: disc;
+    margin: 2px;
 }
 
         /*Precio*/
